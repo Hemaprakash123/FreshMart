@@ -4,12 +4,6 @@ FreshMart is a full-stack web application where users can browse, add to cart, a
 
 ---
 
-## 🚀 Live Website
-
-👉 [Click here to visit the site](https://your-vercel-url.vercel.app)  
-_(Replace this with your actual Vercel URL)_
-
----
 
 ## 💡 Features
 
