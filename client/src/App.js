@@ -19,11 +19,11 @@ function App() {
       <div className="App">
         <Navbar />
         <Routes>
-          <Route  path="/"  exact element={<HomeScreen />} />
-          <Route  path="/cart"  exact element={<CartScreen />} />
-          <Route  path='/register' exact element={<RegisterScreen />} />
-          <Route  path="/login" exact element={<ProtectedRoute><LoginScreen /></ProtectedRoute>} />
-          <Route  path="/orderhistory" exact element={<OrderHistory user={user} />} />
+          <Route  path="/"   element={<HomeScreen />} />
+          <Route  path="/cart"   element={<CartScreen />} />
+          <Route  path='/register'  element={<RegisterScreen />} />
+          <Route  path="/login"  element={<ProtectedRoute><LoginScreen /></ProtectedRoute>} />
+          <Route  path="/orderhistory" element={<OrderHistory user={user} />} />
           {/* <Route
             path="/admin"
             element={user?.admin ? <AdminScreen /> : <Navigate to="/" />}

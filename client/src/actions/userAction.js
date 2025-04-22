@@ -5,7 +5,7 @@ export const registerUser = (user,navigate) => async (dispatch) => {
   dispatch({ type: 'USER_REGISTER_REQUEST' });
 
   try {
-    const response = await axios.post('/api/users/register', user);
+    const response = await axios.post('https://freshmart-backend.vercel.app/api/users/register', user);
     console.log(response);
 
     dispatch({ type: 'USER_REGISTER_SUCCESS' });
@@ -27,7 +27,7 @@ export const loginUser = (user) => async (dispatch) => {
   dispatch({ type: 'USER_LOGIN_REQUEST' });
 
   try {
-    const response = await axios.post('/api/users/login', user);
+    const response = await axios.post('https://freshmart-backend.vercel.app/api/users/login', user);
     console.log(response);
 
     dispatch({ type: 'USER_LOGIN_SUCCESS', payload: response.data });
@@ -51,7 +51,7 @@ export const getAllUsers = () => async dispatch => {
   dispatch({ type: 'GET_USERS_REQUEST' });
 
   try {
-    const response = await axios.get('/api/users/getallusers');
+    const response = await axios.get('https://freshmart-backend.vercel.app/api/users/getallusers');
     console.log('Fruits fetched from API:', response.data);
     dispatch({ type: 'GET_USERS_SUCCESS', payload: response.data });
   } catch (error) {
@@ -62,7 +62,7 @@ export const getAllUsers = () => async dispatch => {
 
 export const deleteuser=(userid)=>async dispatch=>{
   try {
-    await axios.post('/api/users/deleteuser',{userid})
+    await axios.post('https://freshmart-backend.vercel.app/api/users/deleteuser',{userid})
     alert('user deleted successfully')
     window.location.reload()
   } catch (error) {

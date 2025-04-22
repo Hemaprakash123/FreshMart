@@ -33,7 +33,7 @@ export const placeOrder = (orderData) => {
     return async (dispatch) => {
       dispatch(fetchOrderHistoryRequest());
       try {
-        const response = await axios.get(`/api/orders/history/${userId}`);
+        const response = await axios.get(`https://freshmart-backend.vercel.app/api/orders/history/${userId}`);
         dispatch(fetchOrderHistorySuccess(response.data));
       } catch (error) {
         dispatch(fetchOrderHistoryFailure(error.message));
@@ -43,10 +43,10 @@ export const placeOrder = (orderData) => {
   
   export const deliverOrder=(orderid)=>async dispatch=>{
     try {
-      const response=await axios.post('/api/orders/deliverorder',{orderid})
+      const response=await axios.post('https://freshmart-backend.vercel.app/api/orders/deliverorder',{orderid})
       console.log(response)
       alert('Order delivered')
-      const orders=await axios.get('/api/orders/getallorders')
+      const orders=await axios.get('https://freshmart-backend.vercel.app/api/orders/getallorders')
       dispatch({type:'GET_ALLORDERS_SUCCESS',payload:orders.data})
     } catch (error) {
       console.log(error)
@@ -57,7 +57,7 @@ export const placeOrder = (orderData) => {
     dispatch({ type: 'GET_ALLORDERS_REQUEST' });
   
     try {
-      const response = await axios.get('/api/orders/getallorders');
+      const response = await axios.get('https://freshmart-backend.vercel.app/api/orders/getallorders');
       dispatch({ type: 'GET_ALLORDERS_SUCCESS', payload: response.data });
     } catch (error) {
       dispatch({

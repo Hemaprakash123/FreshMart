@@ -47,7 +47,12 @@ import '../database/db.js';
 const app = express();
 
 // Middlewares
-app.use(cors());
+app.use(
+  cors({
+      origin: process.env.NODE_ENV === 'production' ? 'https://fresh-mart.vercel.app' : '*',
+      credentials: true,
+  })
+);
 app.use(express.json());
 
 // Routes
