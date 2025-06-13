@@ -28,7 +28,7 @@ FreshMart is a full-stack web application where users can browse, add to cart, a
 - **Frontend:** React.js, Redux, Axios
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB Atlas
-- **Hosting:** Vercel (frontend), Render (backend)
+- **Hosting:** Render (frontend), Render (backend)
 
 ---
 
