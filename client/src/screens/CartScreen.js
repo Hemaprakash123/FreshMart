@@ -288,7 +288,7 @@ export const CartScreen = () => {
 
   const fetchOrderHistory = async (userId) => {
     try {
-      const response = await axios.get(`https://freshmart-backend.vercel.app/api/orders/history/${userId}`);
+      const response = await axios.get(`http://localhost:8080/api/orders/history/${userId}`);
       console.log('Order history:', response.data);
     } catch (error) {
       console.error('Error fetching order history:', error);
