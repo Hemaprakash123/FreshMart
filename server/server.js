@@ -39,7 +39,7 @@ const app = express();
 // Middlewares
 app.use(
   cors({
-    origin: process.env.NODE_ENV === 'production' ? 'https://fresh-mart.vercel.app' : '*',
+    origin: process.env.NODE_ENV === 'production' ? 'https://freshmart-frontend-b4bx.onrender.com' : '*',
     credentials: true,
   })
 );
