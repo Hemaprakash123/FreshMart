@@ -117,7 +117,7 @@ const OrderForm = ({ totalAmount, cartItems, user, onClose, fetchOrderHistory })
     };
   
     try {
-      const response = await axios.post('http://localhost:8080/api/orders/add', orderData);
+      const response = await axios.post('https://freshmart-backend-v723.onrender.com/api/orders/add', orderData);
       console.log('Response from API:', response.data);
   
       dispatch(clearCart()); // 🔥 Clear cart after successful order
